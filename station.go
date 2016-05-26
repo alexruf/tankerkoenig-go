@@ -19,34 +19,20 @@ var _ StationService = &StationServiceOp{}
 
 // Station represents a gas station.
 type Station struct {
-	// Brand
-	Brand string `json:"brand"`
-	// Distance (air line) from the search point to the gas station
-	Dist float64 `json:"dist"`
-	// House number
-	HouseNumber string `json:"houseNumber"`
-	// ID
-	Id string `json:"id"`
-	// Open-status
-	IsOpen bool `json:"isOpen"`
-	// Latitude
-	Lat float64 `json:"lat"`
-	// Longitude
-	Lng float64 `json:"Lng"`
-	// Name
-	Name string `json:"name"`
-	// Place
-	Place string `json:"place"`
-	// Post code
-	PostCode int `json:"postCode"`
-	// Price for diesel fuel type
-	Diesel float32 `json:"diesel"`
-	// Price for E5 fuel type
-	E5 float32 `json:"e5"`
-	// Price for E10 fuel type
-	E10 float32 `json:"e10"`
-	// Street
-	Street string `json:"street"`
+	Brand       string  `json:"brand"`       // Brand
+	Dist        float64 `json:"dist"`        // Distance (air line) from the search point to the gas station
+	HouseNumber string  `json:"houseNumber"` // House number
+	Id          string  `json:"id"`          // ID
+	IsOpen      bool    `json:"isOpen"`      // Open-status
+	Lat         float64 `json:"lat"`         // Latitude
+	Lng         float64 `json:"Lng"`         // Longitude
+	Name        string  `json:"name"`        // Name
+	Place       string  `json:"place"`       // Place
+	PostCode    int     `json:"postCode"`    // Post code
+	Diesel      float32 `json:"diesel"`      // Price for diesel fuel type
+	E5          float32 `json:"e5"`          // Price for E5 fuel type
+	E10         float32 `json:"e10"`         // Price for E10 fuel type
+	Street      string  `json:"street"`      // Street
 }
 
 // stationRoot represents a response from the Tankerkönig-API.
