@@ -20,10 +20,10 @@ var _ PricesService = &PricesServiceOp{}
 
 // Price represents a price data structure.
 type Price struct {
-	Status string  `json:"status"` // Open-status
-	Diesel float32 `json:"diesel"` // Price for diesel fuel type
-	E5     float32 `json:"e5"`     // Price for E5 fuel type
-	E10    float32 `json:"e10"`    // Price for E10 fuel type
+	Status string      `json:"status"` // Open-status
+	Diesel interface{} `json:"diesel"` // Price for diesel fuel type
+	E5     interface{} `json:"e5"`     // Price for E5 fuel type
+	E10    interface{} `json:"e10"`    // Price for E10 fuel type
 }
 
 // pricesRoot represents a response from the Tankerkönig-API.
