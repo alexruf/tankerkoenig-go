@@ -13,7 +13,7 @@ Create a new client, then use the exposed services to access the API.
 
 _Note that the Demo-API-Key won't return any actual data results! So when using the API make sure to [register](https://creativecommons.tankerkoenig.de/#register) for a real API-Key._
 
-_The API is under Creative Commons (CC BY 4.0) license. It is used by many clients so please restrict API calls to the minimum. An API call every 15 minutes is OK _
+_The API is under Creative Commons (CC BY 4.0) license. It is used by many clients so please restrict API calls to the minimum. An API call every 15 minutes is OK._
 
 To return a list of stations within a radius of a specific location:
 
