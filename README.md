@@ -1,5 +1,8 @@
 # tankerkoenig-go
 
+![test](https://github.com/alexruf/tankerkoenig-go/workflows/test/badge.svg)
+[![tag](https://img.shields.io/github/v/tag/alexruf/tankerkoenig-go?sort=semver)](https://github.com/alexruf/tankerkoenig-go/releases/latest)
+
 A wrapper for the [Tankerkönig-API](https://creativecommons.tankerkoenig.de/) in Go
 
 ## Usage
