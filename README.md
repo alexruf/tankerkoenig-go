@@ -65,7 +65,7 @@ func main() {
 	client := tankerkoenig.NewClient("00000000-0000-0000-0000-000000000002", nil)
 
 	ids := []string{"1c4f126b-1f3c-4b38-9692-05c400ea8e61", "51d4b6a9-a095-1aa0-e100-80009459e03a", "579d25fd-acb9-445a-9494-f7fe0fa7ce4a", "51d4b660-a095-1aa0-e100-80009459e03a"}
-	prices, _, err := client.Prices.Get(ids)
+	prices, _, err := client.Prices.Get(ids...)
 
 	if err != nil {
 		fmt.Printf("Something bad happened: %s\n\n", err)
