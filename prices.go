@@ -8,7 +8,8 @@ import (
 
 // PricesService is an interface to query price information from the Tankerkönig-API.
 type PricesService interface {
-	Get(ids []string) (map[string]Price, *Response, error)
+	// Get returns a map of Price items for one or multiple station IDs.
+	Get(ids ...string) (map[string]Price, *Response, error)
 }
 
 // PricesServiceOp handles communication with the price related methods of the Tankerkönig-API.
@@ -34,8 +35,7 @@ type pricesRoot struct {
 	Prices  map[string]Price `json:"prices"`
 }
 
-// Get returns a map of Price items for a list station IDs.
-func (p *PricesServiceOp) Get(ids []string) (map[string]Price, *Response, error) {
+func (p *PricesServiceOp) Get(ids ...string) (map[string]Price, *Response, error) {
 	path := "json/prices.php"
 
 	if ids != nil {

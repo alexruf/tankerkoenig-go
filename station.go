@@ -7,7 +7,9 @@ import (
 
 // StationService is an interface to query station information from the Tankerkönig-API.
 type StationService interface {
+	// Detail returns the station for the given ID
 	Detail(id string) (Station, *Response, error)
+	// List returns all stations within a radius of a location.
 	List(lat float64, lng float64, rad int) ([]Station, *Response, error)
 }
 
@@ -64,7 +66,6 @@ type stationsRoot struct {
 	Station Station `json:"station"`
 }
 
-// Detail returns the station for the given ID
 func (s *StationServiceOp) Detail(id string) (Station, *Response, error) {
 	path := "json/detail.php"
 
@@ -86,7 +87,6 @@ func (s *StationServiceOp) Detail(id string) (Station, *Response, error) {
 	return root.Station, resp, nil
 }
 
-// List returns all stations within a radius of a location.
 func (s *StationServiceOp) List(lat float64, lng float64, rad int) ([]Station, *Response, error) {
 	path := "json/list.php"
 
