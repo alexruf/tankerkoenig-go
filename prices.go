@@ -38,10 +38,8 @@ type pricesRoot struct {
 func (p *PricesServiceOp) Get(ids ...string) (map[string]Price, *Response, error) {
 	path := "json/prices.php"
 
-	if ids != nil {
-		for n, id := range ids {
-			ids[n] = fmt.Sprintf("%q", id)
-		}
+	for n, id := range ids {
+		ids[n] = fmt.Sprintf("%q", id)
 	}
 
 	query := url.Values{}
